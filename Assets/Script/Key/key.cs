@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class key : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class key : MonoBehaviour{
+    [SerializeField] private KeyType keyType;
+    public enum KeyType{
+        Blue,
+        Green,
+        Yellow,
+        Orange
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public KeyType GetKeyType(){
+        return keyType;
     }
 }
